@@ -1,0 +1,132 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: grey;
+}
+.nav {
+    padding: 5px;
+    margin: 0;
+    background-color: rgb(30, 30, 247);
+    color: #ffff;
+    top: 0;
+    text-align: center;
+}
+
+.nav > h1 {
+    margin: 0;
+}
+
+.container {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container > div {
+    width: 31.33%;
+    padding: 5px;
+    background-color: #ffff;
+}
+
+.container > div > h3 {
+    text-align: center;
+}
+
+#titleMessage {
+    width: 99%;
+    max-width: 99%;
+    min-width: 99%;
+    min-height: 30px;
+    height: 30px;
+    max-height: 30px;
+}
+
+#message {
+    width: 99%;
+    max-width: 99%;
+    min-width: 99%;
+    min-height: 50px;
+    height: 100px;
+}
+
+#messagesList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#messagesList > li {
+    padding: 0;
+    margin: 0;
+    width: 99%;
+}
+
+#messagesList > li {
+    margin-bottom: 5px;
+}
+
+#messagesList > li > div:nth-child(2) {  
+    padding: 5px;
+}
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+#audiosList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.divAudio > div {
+    display: flex;
+    flex-direction: column;
+}
+.divAudio > div > button {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#showMediaList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.contentOpacity {
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+}
+.load {
+    position: fixed;
+    display: flex;
+    padding-bottom: 10px;
+    background: brown;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    right: 40%;
+    top: 40%;
+}
+.load > h3 {
+    color: #ffff;
+}
+.load > div {
+    animation: is-rotating 1s infinite;
+    border: 10px solid white;
+    border-top: 10px solid black;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}

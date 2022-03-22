@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Control</title>
+    <link rel="stylesheet" href="./css/controPanel.css">
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Control Panel</h1>
+    </div>
+    <div class="container">
+        <div class="divMessage">
+            <h3>Messages</h3>
+            <div>
+                <h4>Create a new message</h4>
+                <label for="titleMessage">Title</label>
+                <textarea type="text" name="titleMessage" id="titleMessage"
+                    placeholder="Type the title your message"></textarea>
+                <label for="message">Message</label>
+                <textarea type="text" name="message" id="message" placeholder="Type your message here"></textarea>
+                <button id="createMessage">Save</button>
+            </div>
+            <div>
+                <h4>Messages saved</h4>
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+        <div class="divAudio">
+            <h3>Audios</h3>
+            <div>
+                <h4>import audio</h4>
+                <input type="text" name="audioTitle" id="audioTitle" placeholder="Title">
+                <input type="file" accept="audio/*" name="audio"
+                    id="audio">
+                <button id="importAudio">Save</button>
+            </div>
+            <div>
+                <h4>Audios saved</h4>
+                <ul id="audiosList"></ul>
+            </div>
+        </div>
+        <div class="divMedia">
+            <h3>Media</h3>
+            <div>
+                <h4>import media</h4>
+                <input type="text" name="mediaTitle" id="mediaTitle" placeholder="Title">
+                <input type="file" accept="/*" name="media" id="media">
+                <button id="importMedia">Save</button>
+            </div>
+            <div>
+                <h4>Media saved</h4>
+                <ul id="showMediaList"></ul>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <div class="load" style="display: none;">
+        <h3></h3>
+        <div></div>
+    </div>
+    <script type="module" src="./js/panelControl.js"></script>
+</body>
+
+</html>

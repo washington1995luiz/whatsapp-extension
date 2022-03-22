@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools WhatsApp</title>
+    <style>
+        .content {
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+            width: 250px;
+            overflow: scroll;
+        }
+
+        .content>section {
+            display: none;
+            height: auto;
+            width: auto;
+        }
+
+        .active {
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        .buttonsShowTypeList {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .buttonsShowTypeList>a {
+            border: 1px solid grey;
+            padding: 1px;
+            border-radius: 2px;
+            background: grey;
+            text-decoration: none;
+            color: black;
+            width: 60px;
+            text-align: center;
+        }
+
+        .buttonsShowTypeList>a:hover {
+            background-color: rgb(141, 133, 133);
+        }
+
+        .linkActivate {
+            background: green !important;
+            color: white !important;
+        }
+
+        ul {
+            margin: 0;
+            margin-top: 5px;
+            margin-right: 1px;
+            padding: 0;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        li {
+            border: 1px solid black;
+            border-radius: 2px;
+            background: #ffff;
+            margin-bottom: 5px;
+        }
+
+        .titleBox {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contentOpacity {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .load {
+            animation: is-rotating 1s infinite;
+            border: 10px solid grey;
+            border-top: 10px solid green;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 30%;
+            top: 40%;
+
+        }
+
+        @keyframes is-rotating {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;padding-bottom: 5px; border-bottom: 1px solid black; ">
+        <h1 style="margin: 0;">WhatsApp</h1>
+        <a id="panelControl"><img src="./src/icons/settings.png"></a>
+    </div>
+    <div>
+    <div style="display: none;">
+        <input type="text" name="text" id="text">
+        <button id="saveMessage">Save</button>
+        <button id="btn">teste</button>
+    </div>
+    <div class="buttonsShowTypeList">
+        <a href="#messagesList">Messages</a>
+        <a href="#audiosList">Audios</a>
+        <a href="#mediaList">Media</a>
+    </div>
+
+    <div class="content">
+        <section id="messagesList">
+            <div class="messagesList">
+                <ul></ul>
+            </div>
+        </section>
+        <section id="audiosList">
+            <div class="audiosList">
+                <ul id="listarAudios"></ul>
+            </div>
+        </section>
+        <section id="mediaList">
+            <div class="mediaList">
+                <ul id="showMediaList"></ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="load" style="display: none;"></div>
+</div>
+    <script type="module" src="./popup.js"></script>
+</body>
+
+</html>

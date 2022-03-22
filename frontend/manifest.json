@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "name": "Tools WhatsApp",
+    "description": "Extensão WhatsApp",
+    "author": "Washington Luiz",
+    "icons": {"16":"./src/icons/whatsapp.png"},
+    "host_permissions": ["*://web.whatsapp.com/*"],
+    "permissions": ["tabs", "storage", "browsingData", "cookies", "scripting"],
+    "content_scripts": [
+        {
+            "matches": ["https://web.whatsapp.com/*"],
+            "js": ["chatId.js"]
+        }
+    ],
+    "action": {
+   	 "default_title": "Tools WhatsApp",
+   	 "default_popup": "index.html"
+    }
+}
